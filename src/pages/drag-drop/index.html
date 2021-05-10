@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1, #div2 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<link rel="stylesheet" href="../../styles/reset.css" />
+<link rel="stylesheet" href="../../styles/geral.css" />
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<!-- <p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcof3pIm8ZLI0NMZKT7T47CuANQmWvSzd8EA&usqp=CAU" draggable="true" ondragstart="drag(event)" height="69"> -->
+
+
+
+<main class="dad-dashboard">
+  <section>
+    <header><h2>Draft list</h2></header>
+    <table>
+      <thead>
+        <tr>
+          <td>#</td>
+          <td>Title</td>
+        </tr>
+      </thead>
+      <tbody ondrop="drop(event)" ondragover="allowDrop(event)">
+        <tr draggable="true" ondragstart="drag(event)">
+          <td>1</td>
+          <td>Title Description</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Title Description</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Title Description</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Title Description</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Title Description</td>
+        </tr>
+      </tbody>
+    </table>    
+  </section>
+
+  <section>
+    <header><h2>Published list</h2></header>
+    <table>
+      <thead>
+        <tr>
+          <td>#</td>
+          <td>Title</td>
+        </tr>
+      </thead>
+      <tbody ondrop="drop(event)" ondragover="allowDrop(event)">
+        <tr>
+          <td>1</td>
+          <td>Title Description</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Title Description</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Title Description</td>
+        </tr>
+      </tbody>
+    </table>    
+  </section>
+
+
+</main>
+
+
+</body>
+</html>
