@@ -21,6 +21,7 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
+  console.log(data)
   ev.target.appendChild(document.getElementById(data));
 }
 </script>
@@ -30,15 +31,6 @@ function drop(ev) {
 <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-
-<!-- <p>Drag the W3Schools image into the rectangle:</p>
-
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-<img id="drag1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcof3pIm8ZLI0NMZKT7T47CuANQmWvSzd8EA&usqp=CAU" draggable="true" ondragstart="drag(event)" height="69"> -->
-
-
 
 <main class="dad-dashboard">
   <section>
@@ -51,23 +43,23 @@ function drop(ev) {
         </tr>
       </thead>
       <tbody ondrop="drop(event)" ondragover="allowDrop(event)">
-        <tr draggable="true" ondragstart="drag(event)">
+        <tr  id="r1" draggable="true" ondragstart="drag(event)">
           <td>1</td>
           <td>Title Description</td>
         </tr>
-        <tr>
+        <tr  id="r2" draggable="true" ondragstart="drag(event)">
           <td>2</td>
           <td>Title Description</td>
         </tr>
-        <tr>
+        <tr  id="r3" draggable="true" ondragstart="drag(event)">
           <td>3</td>
           <td>Title Description</td>
         </tr>
-        <tr>
+        <tr  id="r4" draggable="true" ondragstart="drag(event)">
           <td>4</td>
           <td>Title Description</td>
         </tr>
-        <tr>
+        <tr  id="r5" draggable="true" ondragstart="drag(event)">
           <td>5</td>
           <td>Title Description</td>
         </tr>
@@ -85,18 +77,6 @@ function drop(ev) {
         </tr>
       </thead>
       <tbody ondrop="drop(event)" ondragover="allowDrop(event)">
-        <tr>
-          <td>1</td>
-          <td>Title Description</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Title Description</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Title Description</td>
-        </tr>
       </tbody>
     </table>    
   </section>
